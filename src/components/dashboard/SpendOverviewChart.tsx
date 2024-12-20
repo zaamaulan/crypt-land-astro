@@ -33,7 +33,7 @@ export const SpendOverviewChart = () => {
         <p></p>
       </CardHeader>
       <CardContent>
-        <ChartContainer className="h-[24rem] w-full" config={chartConfig}>
+        <ChartContainer className="h-[26rem] w-full" config={chartConfig}>
           <AreaChart
             accessibilityLayer
             data={chartData}

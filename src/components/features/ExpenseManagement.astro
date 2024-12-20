@@ -1,0 +1,22 @@
+---
+import Image from "astro/components/Image.astro";
+import { Button } from "../ui/button";
+
+import dump from "@assets/dump.png?url";
+---
+
+<article class="grid grid-cols-2 items-center gap-x-40">
+  <Image src={dump} alt="dump" width={717} height={512} />
+  <div class="flex flex-col gap-y-9">
+    <div class="space-y-6">
+      <h3 class="text-5xl font-bold leading-tight">
+        Optimise expense Management as a team
+      </h3>
+      <p class="text-xl">
+        Bring harmony to team expenses with budget limits and real-time
+        monitiring. Freedom for your staff. Peace of mind for you.
+      </p>
+    </div>
+    <Button className="w-fit rounded-full font-semibold">Explore more</Button>
+  </div>
+</article>

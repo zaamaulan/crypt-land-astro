@@ -7,11 +7,11 @@ import PerformanceMetrics from "./dashboard/PerformanceMetrics.astro";
 ---
 
 <div class="relative mx-auto w-full max-w-screen-2xl">
-  <Card className="rounded-[20px] border-none bg-blue-700 !p-4">
+  <Card className="rounded-[26px] border-none bg-blue-700 !p-4">
     <Card className="flex flex-col gap-y-6 rounded-[20px] p-6">
       <PerformanceMetrics />
       <div class="flex gap-x-6">
-        <Card className="flex rounded-[20px] px-[26px] py-5">
+        <Card className="flex rounded-[20px] p-6">
           <FinancialSummary />
         </Card>
         <SpendOverviewChart client:load />
