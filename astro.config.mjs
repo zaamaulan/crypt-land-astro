@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind({ applyBaseStyles: true })],
+  integrations: [react(), tailwind({ applyBaseStyles: false })],
   site: "https://crypt-land-astro.vercel.app",
   base: "/",
 });

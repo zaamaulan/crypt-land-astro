@@ -48,14 +48,14 @@ export const BookDemoForm = () => {
                     {...field}
                   />
                   <Button
-                    className="absolute min-w-[11rem] top-1/2 flex justify-end !right-0 mr-2 -translate-y-1/2  bg-lime-400 font-semibold text-lg px-8 py-4 rounded-full hover:bg-lime-400/90 h-[3.75rem]"
+                    className="absolute !right-0 top-1/2 mr-2 flex h-[3.75rem] min-w-[11rem] -translate-y-1/2 justify-end rounded-full px-8 py-4 text-lg font-semibold"
                     type="submit"
                   >
                     Book a Demo
                   </Button>
                 </div>
               </FormControl>
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />

@@ -1,0 +1,19 @@
+---
+import { Button } from "../ui/button";
+
+import NavLink from "../navigation/NavLink.astro";
+---
+
+<header class="container fixed left-1/2 top-10 z-50 -translate-x-1/2">
+  <nav class="flex w-full items-center justify-center">
+    <ul class="flex w-full items-center justify-center gap-x-12">
+      <NavLink />
+      <Button
+        className="h-[3.75rem] min-w-[11rem] rounded-full px-8 py-4 text-lg font-semibold"
+        type="submit"
+      >
+        Sign up
+      </Button>
+    </ul>
+  </nav>
+</header>

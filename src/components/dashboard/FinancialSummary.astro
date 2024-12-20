@@ -1,0 +1,47 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Separator } from "../ui/separator";
+
+const data = [
+  {
+    title: "Total Balance",
+    value: 350,
+  },
+  {
+    title: "Total Income",
+    value: 320,
+    percentage: "92%",
+  },
+  {
+    title: "Total Expense",
+    value: 220,
+    percentage: "92%",
+  },
+];
+---
+
+<div class="flex flex-col">
+  {
+    data.map((item, index) => (
+      <Fragment>
+        <Card className="rounded-[20px] border-none">
+          <CardHeader>
+            <CardTitle className="flex justify-between text-lg items-start">
+              {item.title} <span class="text-base">{item.percentage}</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-5xl">
+              {Intl.NumberFormat("en-EN", {
+                style: "currency",
+                currency: "USD",
+                maximumFractionDigits: 0,
+              }).format(item.value)}
+            </p>
+          </CardContent>
+        </Card>
+        {index !== data.length - 1 && <Separator />}
+      </Fragment>
+    ))
+  }
+</div>

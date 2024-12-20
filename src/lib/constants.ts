@@ -1,8 +1,3 @@
-export interface NavLink {
-  label: string;
-  href: string;
-}
-
 export const navLinks = [
   {
     label: "About us",

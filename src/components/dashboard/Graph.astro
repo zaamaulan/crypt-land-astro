@@ -1,0 +1,17 @@
+---
+interface Props {
+  color?: string;
+}
+
+const { color = "lime-700" } = Astro.props;
+---
+
+<div class="inline-grid grid-cols-4 place-items-end gap-x-2">
+  <div class="h-[22px] w-[6px] opacity-55" style={{ backgroundColor: color }}>
+  </div>
+  <div class="h-[34px] w-[6px]" style={{ backgroundColor: color }}></div>
+  <div class="h-[27px] w-[6px] opacity-55" style={{ backgroundColor: color }}>
+  </div>
+  <div class="h-[38px] w-[6px] opacity-55" style={{ backgroundColor: color }}>
+  </div>
+</div>

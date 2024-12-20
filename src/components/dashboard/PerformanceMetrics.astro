@@ -1,0 +1,53 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+
+import Graph from "../dashboard/Graph.astro";
+
+const data = [
+  {
+    title: "Total Profit",
+    value: 350_240,
+    increase: "+18.23",
+    color: "#72A700",
+  },
+  {
+    title: "Total revenue",
+    value: 400_690,
+    increase: "+28.35",
+    color: "#EE1F1F",
+  },
+  {
+    title: "Product sold",
+    value: 200_000,
+    increase: "+28.35",
+    color: "#003FDB",
+  },
+];
+---
+
+<div class="grid grid-cols-3 gap-x-6">
+  {
+    data.map((item) => (
+      <Card className="rounded-[20px]">
+        <CardHeader>
+          <CardTitle className="flex justify-between text-lg items-start">
+            {item.title}
+            <span class="text-base" style={{ color: item.color }}>
+              {item.increase}
+            </span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex justify-between">
+          <p class="text-5xl">
+            {Intl.NumberFormat("en-EN", {
+              style: "currency",
+              currency: "USD",
+              maximumFractionDigits: 0,
+            }).format(item.value)}
+          </p>
+          <Graph color={item.color} />
+        </CardContent>
+      </Card>
+    ))
+  }
+</div>
