@@ -27,7 +27,7 @@ const chartConfig = {
 
 export const SpendOverviewChart = () => {
   return (
-    <Card className="flex-1 rounded-[20px]">
+    <Card className="flex-1">
       <CardHeader>
         <CardTitle>Spend Overview</CardTitle>
         <p></p>

@@ -25,23 +25,22 @@ const chartConfig = {
 
 export const TotalExpenseChart = () => {
   return (
-    <ChartContainer
-      config={chartConfig}
-      className="mx-auto aspect-square max-h-[150px]"
-    >
+    <ChartContainer config={chartConfig} className="h-[150px]">
       <RadialBarChart
+        width={100}
+        height={100}
         data={chartData}
         startAngle={90}
         endAngle={-110}
-        innerRadius={80-30}
-        outerRadius={110-30}
+        innerRadius={80 - 30}
+        outerRadius={110 - 30}
       >
         <PolarGrid
           gridType="circle"
           radialLines={false}
           stroke="none"
           className="first:fill-muted last:fill-background"
-          polarRadius={[86-30, 74-30]}
+          polarRadius={[86 - 30, 74 - 30]}
         />
         <RadialBar dataKey="visitors" background />
         <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
